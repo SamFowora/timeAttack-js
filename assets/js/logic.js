@@ -7,7 +7,7 @@
 // timercount = 60 for start time
 // need to disable (.disabled) start button after it has began (boolean)
 // keyDown event? [define]
-// init () function activates the other page functions
+// init () function activates the other page functions - would come after pressing start quiz
 // [predefined question array]
 // [math.floor(mathrandom() * something.length)]
 
