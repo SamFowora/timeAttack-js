@@ -25,14 +25,30 @@
             // if answer is incorrect, decrement by an additional 10s 
             // if all questions are answered  before time is finished, clear timer
             // if all timer runs out before all questions are finished, clear timer
-function countdown() {
-    currentTime--
-    timeLeft.textContent = currentTime
 
-    if (currentTime === 0) {
-        clearInterval(timerId)
-        alert("Time's Up!")
-    }
-}
+// Constants
+const countdown = document.getElementById('timer');
+const questions = document.getElementById('questions');
+const questionTitle = document.getElementById('question-title');
+const questionChoices = document.getElementById('choices');
+const startQuiz = document.getElementById('start');
+const endScreen = document.getElementById('end-screen');
+const finalScore = document.getElementById('final score');
+const initialsNow = document.getElementById('initials');
+const submitQuiz = document.getElementById('sumbit');
+const highscores = document.getElementById('highscores');
 
-let timerId = setInterval(countdown, 1000)
+
+// Working out the timer:
+
+//             function countdown() {
+//     currentTime--
+//     timeLeft.textContent = currentTime
+
+//     if (currentTime === 0) {
+//         clearInterval(timerId)
+//         alert("Time's Up!")
+//     }
+// }
+
+// let timerId = setInterval(countdown, 1000)
