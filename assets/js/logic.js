@@ -1,4 +1,3 @@
-// don't need questions.js
 // use render for showing highscores
 // question would be array of objects [question title, answers, correct/incorrect]
 // separate rendering and checking correct answers
@@ -26,8 +25,8 @@
             // if all questions are answered  before time is finished, clear timer
             // if all timer runs out before all questions are finished, clear timer
 
-// Constants
-const countdown = document.getElementById('timer');
+// Constants + DOM
+const timer = document.getElementById('timer');
 const questions = document.getElementById('questions');
 const questionTitle = document.getElementById('question-title');
 const questionChoices = document.getElementById('choices');
@@ -37,18 +36,22 @@ const finalScore = document.getElementById('final score');
 const initialsNow = document.getElementById('initials');
 const submitQuiz = document.getElementById('sumbit');
 const highscores = document.getElementById('highscores');
+const feedback = document.getElementById('feedback');
+var secondsLeft;
 
+// begin function to start quiz
+function begin() {
+    secondsLeft = 60
+}
+startQuiz.addEventListener("click", begin);
 
 // Working out the timer:
+const countdown = setInterval(function(){
+    console.log(secondsLeft);
+    secondsLeft--
+    if (secondsLeft === 0) {
+        console.log("All Done! Let's check your results");
+        clearInterval(countdown);
+    }
+}, 1000);
 
-//             function countdown() {
-//     currentTime--
-//     timeLeft.textContent = currentTime
-
-//     if (currentTime === 0) {
-//         clearInterval(timerId)
-//         alert("Time's Up!")
-//     }
-// }
-
-// let timerId = setInterval(countdown, 1000)
