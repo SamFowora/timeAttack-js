@@ -37,12 +37,18 @@ const initialsNow = document.getElementById('initials');
 const submitQuiz = document.getElementById('sumbit');
 const highscores = document.getElementById('highscores');
 const feedback = document.getElementById('feedback');
-var secondsLeft;
+
+// Variables
+var secondsLeft = 60;
+var randomInt = 0;
+var score = 0;
+
+// 
+
 
 // begin function to start quiz
-function begin() {
-    secondsLeft = 60
-}
+
+
 startQuiz.addEventListener("click", begin);
 
 // Working out the timer:

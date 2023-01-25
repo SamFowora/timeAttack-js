@@ -52,5 +52,16 @@ let questOptions = [
             'concat()',
         ],
         correctOption: 3
+    },
+
+    {
+        title: 'choose the odd one out',
+        options: [
+            'toString()',
+            'toFixed()',
+            'ValueOf()',
+            'concat()',
+        ],
+        correctOption: 3
     }
 ]
