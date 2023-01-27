@@ -37,7 +37,7 @@ const initialsNow = document.getElementById('initials');
 const submitQuiz = document.getElementById('sumbit');
 const highscores = document.getElementById('highscores');
 const feedback = document.getElementById('feedback');
-
+const startScreenEl = document.getElementById("start-screen");
 // Variables
 var secondsLeft = 60;
 var randomInt = 0;
@@ -47,15 +47,21 @@ var score = 0;
 
 
 // begin function to start quiz
-
-
 startQuiz.addEventListener("click", begin);
+// hide start screen
+startScreenEl.setAttribute("class", "hide");
+// // un-hide questions section
+questionsEl.removeAttribute("class");
+// // start timer
+timerId = setInterval(clockTick, 1000);
+// // show starting time 
+timerEl.textContent = time;
 
 // Working out the timer:
 const countdown = setInterval(function(){
     console.log(secondsLeft);
     secondsLeft--
-    if (secondsLeft === 0) {
+    if (secondsLeft === 0 || questions === 0) {
         console.log("All Done! Let's check your results");
         clearInterval(countdown);
     }
