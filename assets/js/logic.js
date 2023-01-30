@@ -45,17 +45,23 @@ var score = 0;
 
 // 
 
+document.getElementById.innerHTML = startScreenEl
 
 // begin function to start quiz
 startQuiz.addEventListener("click", begin);
 // hide start screen
-startScreenEl.setAttribute("class", "hide");
 // // un-hide questions section
-questionsEl.removeAttribute("class");
 // // start timer
-timerId = setInterval(clockTick, 1000);
 // // show starting time 
+function begin() {
+    startScreenEl.classList.add("hide");
+    questions.classList.remove("hide");
+    startScreenEl.setAttribute("class", "hide");
+    questionsEl.removeAttribute("class");
+}
+timerId = setInterval(clockTick, 1000);
 timerEl.textContent = time;
+
 
 // Working out the timer:
 const countdown = setInterval(function(){
